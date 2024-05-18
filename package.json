@@ -1,5 +1,6 @@
 {
   "name": "koishi-plugin-stats",
+  "description": "Stats Service for Koishi",
   "version": "0.2.4",
   "main": "lib/index.js",
   "typings": "lib/index.d.ts",
@@ -7,9 +8,21 @@
     "lib",
     "dist"
   ],
-  "license": "MIT",
+  "koishi": {
+    "description": {
+      "zh": "为 Koishi 提供更高细粒度的统计服务。"
+    }
+  },
+  "repository": {
+    "type": "git",
+    "url": "git+https://github.com/Kokoro-js/koishi-plugin-stats.git"
+  },
+  "bugs": {
+    "url": "https://github.com/Kokoro-js/koishi-plugin-stats/issues"
+  },
+  "license": "AGPL-3.0-or-later",
   "keywords": [
-    "chatbot",
+    "stats",
     "koishi",
     "plugin"
   ],
