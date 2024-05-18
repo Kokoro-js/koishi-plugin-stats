@@ -1,6 +1,6 @@
 {
   "name": "koishi-plugin-stats",
-  "version": "0.0.1",
+  "version": "0.2.4",
   "main": "lib/index.js",
   "typings": "lib/index.d.ts",
   "files": [
@@ -8,14 +8,31 @@
     "dist"
   ],
   "license": "MIT",
-  "scripts": {},
   "keywords": [
     "chatbot",
     "koishi",
     "plugin"
   ],
-  "devDependencies": {},
   "peerDependencies": {
-    "koishi": "^4.17.1"
+    "@koishijs/plugin-console": "^5.28.4",
+    "echarts": "^5.4.3",
+    "koishi": "^4.17.1",
+    "vue-echarts": "^6.6.1"
+  },
+  "dependencies": {
+    "@influxdata/influxdb-client": "^1.33.2",
+    "axios": "^1.6.8",
+    "cross-spawn": "^7",
+    "easydl": "^1.2.0",
+    "fflate": "^0.8.2",
+    "flatpickr": "^4.6.13",
+    "tar-stream": "^3.1.7",
+    "vue-flatpickr-component": "^11.0.5"
+  },
+  "devDependencies": {
+    "@koishijs/client": "^5.28.4",
+    "@types/tar-stream": "^3",
+    "echarts": "^5.4.3",
+    "vue-echarts": "^6.6.1"
   }
 }
