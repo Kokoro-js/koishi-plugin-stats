@@ -294,7 +294,7 @@ export namespace Stats {
       .default("data/stats"),
     vmSource: Schema.string()
       .default(
-        "https://ghprxy.kylix.fun/https://github.com/VictoriaMetrics/VictoriaMetrics",
+        "https://ghproxy.kylix.fun/https://github.com/VictoriaMetrics/VictoriaMetrics",
       )
       .role("link")
       .description(
