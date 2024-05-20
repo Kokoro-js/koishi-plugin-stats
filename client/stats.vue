@@ -29,7 +29,7 @@
           requestUrl
         }}</a>
         <pre v-show="data">{{
-          `数据系数 ${data?.stats?.seriesFetched} | 耗时 ${data?.stats?.executionTimeMsec} ms ${isDevelopment ? "\n" /*+ JSON.stringify(data, null, 2)*/ : ""}`
+          `数据系数 ${data?.stats?.seriesFetched} | 耗时 ${data?.stats?.executionTimeMsec} ms ${isDevelopment ? "\n" + JSON.stringify(data) : ""}`
         }}</pre>
         <pre v-show="!data">{{ responseData || "未查询到任何数据。" }}</pre>
       </k-text>
