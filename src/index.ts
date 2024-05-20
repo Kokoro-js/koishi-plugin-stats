@@ -15,6 +15,9 @@ export * from "./chartOptions";
 export type * from "./query/types";
 export { default as TimeRangeParser } from "time-range-parser";
 export const name = "stats";
+export const usage = `
+<h2>如遇使用问题可以前往QQ群: <a href="http://qm.qq.com/cgi-bin/qm/qr?_wv=1027&k=co1LDHaK22kjUCwaHIj-USETpxh3Fx_I&authKey=2UVKksVxVuzY32rD9Fqbl6g%2F7vyc%2Flg%2Feu80UTRfDSpve6tfWO%2FZ7p8tztF1JD6w&noverify=0&group_code=957500313"> 957500313 </a>讨论<h2>
+`;
 
 declare module "koishi" {
   interface Context {
