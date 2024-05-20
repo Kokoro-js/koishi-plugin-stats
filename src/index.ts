@@ -8,11 +8,12 @@ import type { ChildProcessWithoutNullStreams } from "node:child_process";
 import type {} from "@koishijs/plugin-console";
 import { InfluxDB, Point, WriteApi } from "@influxdata/influxdb-client";
 import queryClient from "./query";
-import * as fs from "node:fs";
 import { PrometheusDriver } from "./query/driver";
+import { readdir, chmodSync } from "node:fs";
 
 export * from "./chartOptions";
 export type * from "./query/types";
+export { default as TimeRangeParser } from "time-range-parser";
 export const name = "stats";
 
 declare module "koishi" {
@@ -84,6 +85,9 @@ export class Stats extends Service {
     }
 
     this.logger.info(binaryPath);
+    if (binaryPath) {
+      chmodSync(binaryPath, 755);
+    }
 
     this.dbProcess = spawn(binaryPath, ["-storageDataPath", dataDir]);
 
@@ -246,7 +250,7 @@ export class Stats extends Service {
       });
 
     return new Promise((resolve, reject) => {
-      fs.readdir(nodeDir, (err, files) => {
+      readdir(nodeDir, (err, files) => {
         if (err) {
           reject(
             new Error(
