@@ -132,7 +132,7 @@ export class Stats extends Service {
           this.defaultWriter.writePoint(point);
           this.defaultWriter
             .flush()
-            .then((e) => this.logger.info(e))
+            .then(() => this.initStatsListener())
             .catch((e) => {
               this.logger.error(e);
               this.ctx.scope.dispose();
