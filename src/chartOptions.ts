@@ -70,6 +70,7 @@ export function generateChartOptions(
   step: number,
 ) {
   return {
+    backgroundColor: "white",
     title: {
       text: name,
     },
