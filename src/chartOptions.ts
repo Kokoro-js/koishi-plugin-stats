@@ -70,9 +70,12 @@ export function generateChartOptions(
   step: number,
 ) {
   return {
-    backgroundColor: "white",
+    backgroundColor: "#2c3e50", // 设置背景色为深色
     title: {
       text: name,
+      textStyle: {
+        color: "#ecf0f1", // 标题字体颜色设置为浅色
+      },
     },
     tooltip: {
       trigger: "axis",
@@ -81,9 +84,25 @@ export function generateChartOptions(
       type: "time",
       min: startTime,
       max: endTime,
+      axisLabel: {
+        color: "#ecf0f1", // x轴字体颜色设置为浅色
+      },
+      axisLine: {
+        lineStyle: {
+          color: "#ecf0f1", // x轴轴线颜色设置为浅色
+        },
+      },
     },
     yAxis: {
       type: "value",
+      axisLabel: {
+        color: "#ecf0f1", // y轴字体颜色设置为浅色
+      },
+      axisLine: {
+        lineStyle: {
+          color: "#ecf0f1", // y轴轴线颜色设置为浅色
+        },
+      },
     },
     series: autoFormatDataToSeries(data, startTime, endTime, step),
   };

@@ -164,7 +164,7 @@ export class Stats extends Service {
     });
 
     this.ctx.any().before("command/execute", ({ command, session }) => {
-      const point = new Point("message")
+      const point = new Point("command")
         .tag("guildId", session.guildId)
         .tag("channelId", session.channelId)
         .tag("userId", session.user["id"] || 0)
